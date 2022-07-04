@@ -64,5 +64,3 @@ let g:lightline = {
       \ },
       \ }
 set laststatus=2
-
-"Julia Support

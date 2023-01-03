@@ -4,10 +4,12 @@ set tabstop=4
 set shiftwidth=4
 set mouse=a
 set backspace=indent,eol,start
+set cursorline
 set number
 set incsearch
 set nocompatible              " be iMproved, required
 set clipboard=unnamedplus
+set lazyredraw
 
 syntax enable
 filetype off                  " required
@@ -18,7 +20,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 " Vundle
-Plugin 'itchyny/vim-gitbranch'
 " Show git branch
 Plugin 'preservim/nerdtree'
 " Nerdtree
@@ -26,11 +27,12 @@ Plugin 'ajh17/vimcompletesme'
 " Vimcompletesme
 Plugin 'raimondi/delimitmate'
 " delimitmate
-Plugin 'itchyny/lightline.vim'
-" lightline theme
-Plugin 'srcery-colors/srcery-vim'
+Plugin 'rhysd/vim-color-spring-night'
 " Colorscheme
-
+Plugin 'christoomey/vim-tmux-navigator'
+" tmux movements
+Plugin 'vim-airline/vim-airline'
+" Airline
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -46,21 +48,12 @@ let NERDTreeWinSize = 25
 
 "---------------------------
 "Color schemes here
-colorscheme srcery
+colorscheme spring-night
 set background=dark
+" Airline Settings
+let g:airline_theme = 'spring_night'
 
 " custom keybinds
 "---------------
 set conceallevel=1
-"lightline
-let g:lightline = {
-	  \ 'colorscheme' : 'selenized_dark',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \ }
 set laststatus=2

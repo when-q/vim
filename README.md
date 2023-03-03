@@ -1,2 +1,2 @@
 # vim
-Vim config, Archive only.
+Vim config

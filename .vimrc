@@ -33,6 +33,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " tmux movements
 Plugin 'vim-airline/vim-airline'
 " Airline
+Plugin 'tpope/vim-unimpaired'
+" unimpaired
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
